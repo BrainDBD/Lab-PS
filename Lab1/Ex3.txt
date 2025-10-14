@@ -1,0 +1,14 @@
+Un semnal este digitizat cu o frecventa de esantionare de 2000 Hz.
+
+a) Care este intervalul de timp intre doua esantioane?
+
+- Frecventa de esantionare 2kHz => 2000 de esantioane pe secunda.
+- Interval de timp intre 2 esantioane = 1 / 2000 = 0.0005s = 0.5ms
+
+b) Daca un esantion este memorat pe 4 biti, cati bytes vor ocupa 1 ora
+de achizitie?
+
+- 4 biti = 0.5 bytes
+- 1 ora = 3600s
+- 2000 de esantioane intr-o secunda
+=> Numarul de bytes ocupati este 3600 * 2000 * 0.5 = 3600000 bytes
