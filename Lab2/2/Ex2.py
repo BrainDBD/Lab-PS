@@ -13,7 +13,7 @@ plt.plot(x, y2, label='y2 = sin(200πx + π/2)', color='red')
 plt.plot(x, y3, label='y3 = sin(200πx + π)', color='green')
 plt.plot(x, y4, label='y4 = sin(200πx + 3π/2)', color='orange')
 plt.legend(loc='upper right')
-plt.savefig('Lab2/PhaseShift.pdf')
+plt.savefig('PhaseShift.pdf')
 plt.show()
 
 fig, axs = plt.subplots(5)
@@ -31,5 +31,5 @@ for i in range(5):
     axs[i].plot(x, y1, label='Original y1', color='blue', linestyle='--')
     axs[i].legend(loc='upper right')
 
-plt.savefig('Lab2/SignalNoising.pdf')
+plt.savefig('SignalNoising.pdf')
 plt.show()
