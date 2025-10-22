@@ -25,7 +25,7 @@ axs[1].legend()
 axs[1].set_title("Padé Approximation")
 
 plt.tight_layout()
-plt.savefig("Lab2/8/Approximations.pdf")
+plt.savefig("Approximations.pdf")
 plt.show()
 
 fig, axs = plt.subplots(1, 2, figsize=(12, 5))
@@ -41,7 +41,7 @@ axs[1].legend()
 axs[1].set_title("Padé Approximation Error (Linear Scale)")
 
 plt.tight_layout()
-plt.savefig("Lab2/8/Errors-Linear.pdf")
+plt.savefig("Errors-Linear.pdf")
 plt.show()
 
 fig, axs = plt.subplots(1, 2, figsize=(12, 5))
@@ -57,5 +57,5 @@ axs[1].legend()
 axs[1].set_title("Padé Approximation Error (Log Scale)")
 
 plt.tight_layout()
-plt.savefig("Lab2/8/Errors-Log.pdf")
+plt.savefig("Errors-Log.pdf")
 plt.show()
