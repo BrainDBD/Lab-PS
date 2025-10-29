@@ -9,7 +9,7 @@ N = 64
 matFour = np.zeros((N, N), dtype=complex)
 for k in range(N):
     for n in range(N):
-        matFour[k, n] = (1 / math.sqrt(N)) * np.exp(-2j * np.pi * k * n / N)
+        matFour[k, n] = (1 / math.sqrt(N)) * (math.e ** (-2j * math.pi * k * n / N))
 
 matFourH = np.conjugate(matFour.T)
 prod = matFourH @ matFour
@@ -36,5 +36,5 @@ axs[4].plot(x, matFour[N-1, :].imag, color='green', linestyle='--')
 
 plt.tight_layout()
 plt.savefig('FourierMat.pdf')
+plt.savefig('FourierMat.png')
 plt.show()
-    
