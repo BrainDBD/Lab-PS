@@ -1,0 +1,21 @@
+PSemndB = 90dB
+SNRdB = 80dB
+
+SNRdB = 10log10(SNR)
+=> SNR = 10 ^ (SNRdB / 10)
+=> SNR = 10 ^ 8
+
+PSemndB = 10log10(PSemn)
+=> PSemn = 10 ^ 9
+
+PZgomot = PSemn / SNR
+=> PZgomot = 10
+
+
+-Verificare:
+
+PZgomotdB = 10log10(PZgomot)
+=> PZgomotdB = 10dB
+
+SNRdB = PSemndB - PZgomotdB
+=> 80dB = 90dB - 10dB ✓
