@@ -1,0 +1,33 @@
+a)
+- Observam din coloana a doua al setului ca diferenta de timp intre doua linii este de o ora sau 3600 de secunde.
+-> Frecventa de esantionare este de 1/3600 Hz.
+
+b)
+- Intervalul de timp este calculat folosind prima si ultima coloana:
+"0, 25-08-2012 00:00, 8"
+"18287, 25-09-2014 23:00, 534"
+-> Prin calcularea diferentei intre cele doua timestampuri aflam ca achizitionarea semnalului a avut loc pe o perioada de 2 ani, 1 luna si 23 de ore.
+-> Distanta in ore este 2 * 365 * 24 + 31 * 24 + 23 = 18287 de ore. Numarul de linii al fisierlui verifica acest rezultat.
+
+c)
+- Frecventa maxima al semnalului nu poate depasi jumatate din frecventa de esantionare (Teorema Nyquist-Shannon)
+- La a) am determinat Fs = 1/3600.
+-> FMax = 1/3600 * 1/2 = 1/7200 Hz.
+
+h)
+- Nu avem dati inregistrate in Train.csv si vrem sa aproximam data la care a inceput achizitionarea semnalului
+- Ramanem doar cu diferite numere de masini inregistrate peste o perioada de timp
+
+-> Intr-un prim pas ne putem folosi de evenimente care se repeta anual ca sarbatorile pentru a determina anotimpul in care ne aflam
+Sarbatorile prezinta anumite trasaturi remarcate in setul de date (Exemplu: Trafic foarte ridicat in noaptea anului nou)
+
+-> Dupa ce am determinat anotimpul in care ne aflam, cautam evenimente unice pentru fiecare an care au avut loc in acel anotimp.
+Exemple de evenimente unice sunt vreme deosebit de nefavorabila (ploi puternice) sau evenimente in comunitate (alegeri)
+Aceste evenimente produc o creste / scadere brusca in trafic care desigur poate fi observata in setul de date
+Ne folosim de faptul ca o asemenea combinatie de evenimente prezinta dati unice pentru un anumit an. Astfel, putem determina anul in care ne aflam.
+
+-> Folosindu-ne de evenimente care se repeta anual si evenimente care sunt unice unui an putem aproxima macar anul si anotimpul in care a inceput masurarea.
+In cel mai bun caz, ziua inceperii achizitionarii este aproape de un asemenea evenimente daca nu chiar in aceeasi zi.
+
+-> Potentiale neajunsuri ale acestei metode sunt diferente regionale in cazul in care nu stim locatia in care a avut loc masurarea, mai multe evenimente care prezinta aceleasi trasaturi si evenimente diferite care se suprapun (Vremea nefavorabila afecteaza traficul pe timp de sarbatoare)
+-> Acuratetea metodei depinde de acuratetea masuratorii traficului si de inregistrarea evenimentelor (Ex: Duratia exacta a vremii nefavorabile)
