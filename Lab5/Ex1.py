@@ -15,7 +15,7 @@ def fft_filter(X, cutoff, fs, type = 'low'):
     
     fft_filtered = fft_X * mask
     X_filtered = np.fft.ifft(fft_filtered).real
-    return X_filtered, fft_filtered, fft_freq
+    return X_filtered, fft_filtered
 
 
 data = np.genfromtxt('Lab5/Train.csv', delimiter=',', skip_header=1, usecols=(2))
@@ -87,14 +87,14 @@ plt.show()
 
 # i)
 
-filtered_data, filtered_fft, mask = fft_filter(data_no_dc, 0.25 / 3600, fs, 'low')
+filtered_data, filtered_fft = fft_filter(data_no_dc, 0.25 / 3600, fs, 'low')
 # 0.25 -> Disregard traffic changes that happen in less than 4 hours
 plt.figure(figsize=(12, 4))
 plt.plot(data_no_dc, color='blue', label='Original')
 plt.plot(filtered_data, color='yellow', label='Low-Pass Filtered')
-plt.xlabel('Sample index')
-plt.ylabel('Traffic count')
-plt.title('Original vs. Low-pass Filtered Traffic Signal')
+plt.xlabel('Samples')
+plt.ylabel('Traffic Count')
+plt.title('Original vs Low-pass Filtered Traffic Signal')
 plt.legend()
 plt.grid(True)
 plt.tight_layout()

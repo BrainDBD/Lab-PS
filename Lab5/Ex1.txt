@@ -29,5 +29,5 @@ Ne folosim de faptul ca o asemenea combinatie de evenimente prezinta dati unice 
 -> Folosindu-ne de evenimente care se repeta anual si evenimente care sunt unice unui an putem aproxima macar anul si anotimpul in care a inceput masurarea.
 In cel mai bun caz, ziua inceperii achizitionarii este aproape de un asemenea evenimente daca nu chiar in aceeasi zi.
 
--> Potentiale neajunsuri ale acestei metode sunt diferente regionale in cazul in care nu stim locatia in care a avut loc masurarea, mai multe evenimente care prezinta aceleasi trasaturi si evenimente diferite care se suprapun (Vremea nefavorabila afecteaza traficul pe timp de sarbatoare)
+-> Potentiale neajunsuri ale acestei metode sunt diferente regionale in cazul in care nu stim locatia in care a avut loc masurarea, mai multe evenimente care prezinta aceleasi trasaturi si evenimente diferite care se suprapun (Vremea nefavorabila poate ascunde o sarbatoare prin scaderea traficului)
 -> Acuratetea metodei depinde de acuratetea masuratorii traficului si de inregistrarea evenimentelor (Ex: Duratia exacta a vremii nefavorabile)
