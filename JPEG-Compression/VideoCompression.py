@@ -28,8 +28,9 @@ class VideoCompressor:
                 break
             
             frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            compressed_frame = self.image_compressor.compress(frame_rgb)
-            compressed_bgr = cv2.cvtColor(compressed_frame.astype('uint8'), cv2.COLOR_RGB2BGR)
+            compressed_data = self.image_compressor.compress(frame_rgb)
+            decompressed_frame = self.image_compressor.decompress(compressed_data)
+            compressed_bgr = cv2.cvtColor(decompressed_frame, cv2.COLOR_RGB2BGR)
             out.write(compressed_bgr)
             
             frame_count += 1
@@ -42,7 +43,7 @@ class VideoCompressor:
 
 
 if __name__ == "__main__":
-    input_video = 'waiting.mp4'
-    output_video = 'waiting_compressed.mp4'
+    input_video = 'video_uncompressed.mp4'
+    output_video = 'video_compressed.mp4'
     compressor = VideoCompressor()
     compressor.compress_video(input_video, output_video)
